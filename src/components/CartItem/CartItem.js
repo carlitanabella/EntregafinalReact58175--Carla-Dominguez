@@ -8,13 +8,16 @@ const CartItem = ({ prod, id, title, name, img, category, description, price, st
     const { resolveItem } = useContext(CartContext);
     return (
         <div className='CartItem'>
-            <img src={img} alt={name} />
-            <div>
-                <p>Título: {name}</p>
-                <p>Cantidad: {totalQuantity}</p>
-                <p>Precio u.: {price}</p>
-                <p>Subtotal: ${quantity * price}</p>
-                <button onClick={() => resolveItem(prod.id)}>Eliminar</button>
+            <picture>
+                <img src={img} alt={name} className='itemImg'/>
+            </picture>
+            
+            <div className='CartItem'>
+                <p className='info'>Título: {name}</p>
+                <p className='info'>Cantidad: {totalQuantity}</p>
+                <p className='info' >Precio u.: {price}</p>
+                <p className='info'>Subtotal: ${quantity * price}</p>
+                <button className='Option' onClick={() => resolveItem(prod.id)}>Eliminar</button>
             </div>
         </div>
     )

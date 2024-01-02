@@ -18,18 +18,6 @@ const CheckoutForm = ({ onConfirm }) => {
   
   }
 
-  // const handleChange = (e) => {
-  //   setFormData({
-  //     ...formData,
-  //     [e.target.name]: e.target.value,
-  //   });
-  // };
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  
-  //   onConfirm(formData);
-  // };
 
   return (
     <form onSubmit={handleConfirm} className="Form">
@@ -46,7 +34,7 @@ const CheckoutForm = ({ onConfirm }) => {
         </label>
       </div>
       <div>
-        <label htmlFor="phone">Teléfono:
+        <label className="Label" htmlFor="phone">Teléfono:
         <input
           className="Input"
           type="text"
@@ -59,7 +47,7 @@ const CheckoutForm = ({ onConfirm }) => {
         </label>
       </div>
       <div>
-        <label htmlFor="email">Correo Electrónico:
+        <label className="Label" htmlFor="email">Correo Electrónico:
         <input
           className="Input"
           type="text"
@@ -71,7 +59,7 @@ const CheckoutForm = ({ onConfirm }) => {
         </label>
       </div>
       <div>
-        <button type="submit">Confirmar Orden</button>
+        <button className="Option" type="submit">Confirmar Orden</button>
       </div>
     </form>
   );

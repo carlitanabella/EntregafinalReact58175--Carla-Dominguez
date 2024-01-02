@@ -1,0 +1,11 @@
+.CartItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.info {
+    color: rgb(104, 97, 85);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 5px;
+}

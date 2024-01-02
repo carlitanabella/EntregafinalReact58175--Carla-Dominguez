@@ -8,25 +8,27 @@ import { NavLink, Link } from 'react-router-dom'
 
 const NavBar = () => {
     return (
-        <nav style={{backgroundColor: '#F0E8D8', display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center'}}>
-            <h1 style={{justifyContent: 'araund', marginRight: '200px'}} >
+        <nav className='navBar' >
+            <h1 className='logo' >
                 <Link to='/'>
                 <Logo />
                 </Link>
             </h1>
            
-            <ul style={{display: 'flex', justifyContent: 'center', alignContent: 'center', marginRight: '200px'}}>
+            <ul className='ulNavBar' >
             <Breadcrumbs separator="/"  maxItems={2} aria-label="breadcrumb">
-                <NavLink  to={'./category/muebles'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} underline="hover" color="inherit" href="#" style={{ listStyleType: "none" }}>Muebles</NavLink>
-                <NavLink to={`./category/blanco`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}   underline="hover" color="inherit" href="#" style={{ listStyleType: "none" }}>Linea Blanco</NavLink>
-                <NavLink to={`./category/alfombras`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}   underline="hover" color="inherit" href="#" style={{ listStyleType: "none" }}>Alfombras</NavLink>
-                <NavLink to={`./category/almohadones`}  className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}  underline="hover" color="inherit" href="#" style={{ listStyleType: "none" }}>Almohadones</NavLink>
+                <NavLink  to={'./category/muebles'} underline="hover" className="textNavBar" >Muebles</NavLink>
+                <NavLink to={`./category/blanco`} underline="hover" className="textNavBar">Linea Blanco</NavLink>
+                <NavLink to={`./category/alfombras`} underline="hover" className="textNavBar">Alfombras</NavLink>
+                <NavLink to={`./category/almohadones`}  underline="hover" className="textNavBar">Almohadones</NavLink>
             </Breadcrumbs>
 
             
             </ul>
-            <h1 style={{justifyContent: 'araund', marginLeft: '100px'}}>
+            <h1 className='Carrito' >
+            <Link to={`./cart`}>
                 <CartWidget />
+            </Link>
             </h1>
             
             

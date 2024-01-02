@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navBar {
+    
+    background: #F0E8D8;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.logo {
+    margin: 30px;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.ulNavBar {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0px 100px 0px 100px;
+    text-decoration: none;
+
+
+
+}
+.textNavBar {
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    color: rgb(104, 97, 85);
+    text-decoration-color: beige ;
+}
+
+.Carrito {
+    justify-content: space-around;
+    margin: 40px;
+
+}
